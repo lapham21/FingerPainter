@@ -10,6 +10,11 @@ import UIKit
 
 class FingerPaintViewController: UIViewController {
     
+    // MARK: - Outlets, Variables and Models
+    
+    
+    
+    
     // MARK: - Colors
     
 //    enum ColorPalette {
