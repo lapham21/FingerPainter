@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Finger Paint View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FingerPaintViewController" customModule="FingerPaint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-YM-DER">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcA-yS-5qb">
+                                        <frame key="frameInset" minX="8" minY="589" width="50" height="50"/>
+                                        <state key="normal" image="OpacityButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS6-ar-REj">
+                                        <frame key="frameInset" minX="8" minY="531" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZU-hj-eV5">
+                                        <frame key="frameInset" minX="8" minY="473" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="0.75"/>
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-gA-78H">
+                                        <frame key="frameInset" minX="8" minY="415" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="0.6"/>
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-jP-cJp">
+                                        <frame key="frameInset" minX="8" minY="357" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="0.45"/>
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ye4-Ye-Z58">
+                                        <frame key="frameInset" minX="8" minY="299" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="0.3"/>
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDM-a0-TUd">
+                                        <frame key="frameInset" minX="8" minY="241" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="0.15"/>
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="1Bk-00-UGD"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="cZU-hj-eV5" secondAttribute="height" id="2kP-65-3V5"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="top" secondItem="LS6-ar-REj" secondAttribute="bottom" constant="8" id="46u-O6-8va"/>
+                                    <constraint firstItem="cZU-hj-eV5" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="6vX-Mn-0SE"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="cZU-hj-eV5" secondAttribute="width" id="A0k-Nn-YDi"/>
+                                    <constraint firstItem="SH4-gA-78H" firstAttribute="top" secondItem="AIe-jP-cJp" secondAttribute="bottom" constant="8" id="BWn-GL-PB3"/>
+                                    <constraint firstItem="SH4-gA-78H" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="FK1-jZ-Lm7"/>
+                                    <constraint firstItem="AIe-jP-cJp" firstAttribute="top" secondItem="ye4-Ye-Z58" secondAttribute="bottom" constant="8" id="Fgb-Ge-14A"/>
+                                    <constraint firstItem="LS6-ar-REj" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="Fv4-sZ-KMp"/>
+                                    <constraint firstItem="ye4-Ye-Z58" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="NUg-Ty-CtF"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="ye4-Ye-Z58" secondAttribute="height" id="Nqx-Uc-0Kd"/>
+                                    <constraint firstItem="oDM-a0-TUd" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="Y30-eZ-zah"/>
+                                    <constraint firstItem="cZU-hj-eV5" firstAttribute="top" secondItem="SH4-gA-78H" secondAttribute="bottom" constant="8" id="ZrB-IJ-CJ2"/>
+                                    <constraint firstItem="LS6-ar-REj" firstAttribute="top" secondItem="cZU-hj-eV5" secondAttribute="bottom" constant="8" id="aIK-4b-oIW"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="AIe-jP-cJp" secondAttribute="height" id="btF-23-mz5"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="SH4-gA-78H" secondAttribute="height" id="clt-fG-rVL"/>
+                                    <constraint firstAttribute="bottom" secondItem="TcA-yS-5qb" secondAttribute="bottom" constant="8" id="d54-xl-hg7"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="oDM-a0-TUd" secondAttribute="width" id="dAd-QD-XTU"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="LS6-ar-REj" secondAttribute="height" id="fhY-CK-5TB"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="ye4-Ye-Z58" secondAttribute="width" id="iBB-vt-njh"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="LS6-ar-REj" secondAttribute="width" id="lK3-TF-VSZ"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="oDM-a0-TUd" secondAttribute="height" id="ofV-hh-6e4"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="AIe-jP-cJp" secondAttribute="width" id="tFD-l9-WgX"/>
+                                    <constraint firstItem="AIe-jP-cJp" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="8" id="uLQ-Hd-yij"/>
+                                    <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="SH4-gA-78H" secondAttribute="width" id="v67-or-P0i"/>
+                                    <constraint firstItem="ye4-Ye-Z58" firstAttribute="top" secondItem="oDM-a0-TUd" secondAttribute="bottom" constant="8" id="y0Y-eh-lut"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vqb-YM-DER" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Wb-Cw-hzH"/>
+                            <constraint firstItem="Vqb-YM-DER" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KJc-AL-loN"/>
+                            <constraint firstAttribute="trailing" secondItem="Vqb-YM-DER" secondAttribute="trailing" id="w4a-Et-0TU"/>
+                            <constraint firstItem="Vqb-YM-DER" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zgo-Sn-FaF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CircleForOpacityLevelButtons" width="25" height="25"/>
+        <image name="OpacityButton" width="25" height="25"/>
+    </resources>
+</document>
