@@ -23,60 +23,94 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcA-yS-5qb">
                                         <state key="normal" image="OpacityButton"/>
+                                        <connections>
+                                            <action selector="showOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FiC-c6-WOx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS6-ar-REj">
-                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="opacityChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rix-bS-1eQ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZU-hj-eV5">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.75"/>
+                                    <button opaque="NO" alpha="0.75" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZU-hj-eV5">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="opacityChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fm3-1C-BAh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-gA-78H">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.6"/>
+                                    <button opaque="NO" alpha="0.59999999999999998" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH4-gA-78H">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="opacityChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HE9-k2-vsL"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-jP-cJp">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.45"/>
+                                    <button opaque="NO" alpha="0.45000000000000001" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-jP-cJp">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="opacityChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ozi-9i-pjj"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ye4-Ye-Z58">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.3"/>
+                                    <button opaque="NO" alpha="0.29999999999999999" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ye4-Ye-Z58">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="opacityChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTW-qt-x4R"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDM-a0-TUd">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.15"/>
+                                    <button opaque="NO" alpha="0.14999999999999999" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDM-a0-TUd">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="opacityChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iXD-fv-SrY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-sG-cdt">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-sG-cdt">
+                                        <accessibility key="accessibilityConfiguration" identifier="brushWidthButtonIdentifier"/>
                                         <state key="normal" image="PaintBrushButton"/>
+                                        <connections>
+                                            <action selector="showOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kae-Yd-kII"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2w-5o-kz9">
-                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintBrushWidthChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVl-7S-xqi"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUA-Wd-iDK">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.75"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUA-Wd-iDK">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintBrushWidthChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zg2-3x-adM"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYf-xO-TjZ">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.6"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYf-xO-TjZ">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintBrushWidthChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Et6-Du-pFs"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6x-3W-pGf">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.45"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6x-3W-pGf">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintBrushWidthChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eO5-q2-oaO"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n6-wN-jqG">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.3"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n6-wN-jqG">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintBrushWidthChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rqg-St-0BP"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-En-tgz">
-                                        <accessibility key="accessibilityConfiguration" identifier="0.15"/>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-En-tgz">
                                         <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintBrushWidthChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcY-vJ-z71"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ac2-4H-QQi">
                                         <state key="normal" image="BackButtonImage"/>
+                                        <connections>
+                                            <action selector="eraseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B51-hv-qAi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,6 +178,20 @@
                             <constraint firstItem="Vqb-YM-DER" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zgo-Sn-FaF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="opacitiyButtons" destination="LS6-ar-REj" collectionClass="NSMutableArray" id="GTU-NC-uix"/>
+                        <outletCollection property="opacitiyButtons" destination="cZU-hj-eV5" collectionClass="NSMutableArray" id="rds-KE-UwG"/>
+                        <outletCollection property="opacitiyButtons" destination="SH4-gA-78H" collectionClass="NSMutableArray" id="b4q-c4-TlX"/>
+                        <outletCollection property="opacitiyButtons" destination="AIe-jP-cJp" collectionClass="NSMutableArray" id="fKu-uX-IE0"/>
+                        <outletCollection property="opacitiyButtons" destination="ye4-Ye-Z58" collectionClass="NSMutableArray" id="RLT-uX-YGG"/>
+                        <outletCollection property="opacitiyButtons" destination="oDM-a0-TUd" collectionClass="NSMutableArray" id="5Sj-JX-Gjt"/>
+                        <outletCollection property="paintBrushWidthButtons" destination="i2w-5o-kz9" collectionClass="NSMutableArray" id="S63-4R-Fnh"/>
+                        <outletCollection property="paintBrushWidthButtons" destination="QUA-Wd-iDK" collectionClass="NSMutableArray" id="NkU-TV-eaq"/>
+                        <outletCollection property="paintBrushWidthButtons" destination="tYf-xO-TjZ" collectionClass="NSMutableArray" id="WLC-kd-Rmz"/>
+                        <outletCollection property="paintBrushWidthButtons" destination="M6x-3W-pGf" collectionClass="NSMutableArray" id="yRY-aC-pi6"/>
+                        <outletCollection property="paintBrushWidthButtons" destination="3n6-wN-jqG" collectionClass="NSMutableArray" id="kYn-u7-Qru"/>
+                        <outletCollection property="paintBrushWidthButtons" destination="GRe-En-tgz" collectionClass="NSMutableArray" id="mHd-L1-q7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
