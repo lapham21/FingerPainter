@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -132,14 +131,11 @@
                                     <constraint firstItem="LS6-ar-REj" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="Fv4-sZ-KMp"/>
                                     <constraint firstItem="ye4-Ye-Z58" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="NUg-Ty-CtF"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="ye4-Ye-Z58" secondAttribute="height" id="Nqx-Uc-0Kd"/>
-                                    <constraint firstItem="QUA-Wd-iDK" firstAttribute="width" secondItem="i2w-5o-kz9" secondAttribute="height" multiplier="1:1" id="Si6-Gg-2Fy"/>
-                                    <constraint firstItem="3n6-wN-jqG" firstAttribute="width" secondItem="i2w-5o-kz9" secondAttribute="height" multiplier="1:1" id="X4P-I8-rKe"/>
                                     <constraint firstItem="oDM-a0-TUd" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="Y30-eZ-zah"/>
                                     <constraint firstItem="tYf-xO-TjZ" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="Zcv-YO-r6K"/>
                                     <constraint firstItem="cZU-hj-eV5" firstAttribute="top" secondItem="SH4-gA-78H" secondAttribute="bottom" constant="8" symbolic="YES" id="ZrB-IJ-CJ2"/>
                                     <constraint firstItem="LS6-ar-REj" firstAttribute="top" secondItem="cZU-hj-eV5" secondAttribute="bottom" constant="8" symbolic="YES" id="aIK-4b-oIW"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="AIe-jP-cJp" secondAttribute="height" id="btF-23-mz5"/>
-                                    <constraint firstItem="tYf-xO-TjZ" firstAttribute="width" secondItem="i2w-5o-kz9" secondAttribute="height" multiplier="1:1" id="c2b-MU-FYm"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="SH4-gA-78H" secondAttribute="height" id="clt-fG-rVL"/>
                                     <constraint firstItem="i2w-5o-kz9" firstAttribute="width" secondItem="pqb-sG-cdt" secondAttribute="width" id="cu9-Qr-2HP"/>
                                     <constraint firstItem="i2w-5o-kz9" firstAttribute="height" secondItem="pqb-sG-cdt" secondAttribute="height" id="cyJ-WH-a8L"/>
@@ -147,7 +143,6 @@
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="oDM-a0-TUd" secondAttribute="width" id="dAd-QD-XTU"/>
                                     <constraint firstItem="3n6-wN-jqG" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="dm9-vp-tIs"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="LS6-ar-REj" secondAttribute="height" id="fhY-CK-5TB"/>
-                                    <constraint firstItem="M6x-3W-pGf" firstAttribute="width" secondItem="i2w-5o-kz9" secondAttribute="height" multiplier="1:1" id="gxq-94-cfE"/>
                                     <constraint firstItem="GRe-En-tgz" firstAttribute="width" secondItem="i2w-5o-kz9" secondAttribute="width" id="h3I-0M-KZM"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="ye4-Ye-Z58" secondAttribute="width" id="iBB-vt-njh"/>
                                     <constraint firstItem="M6x-3W-pGf" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="iJD-wX-15x"/>
@@ -155,7 +150,7 @@
                                     <constraint firstItem="QUA-Wd-iDK" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="kPO-oz-k3X"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="LS6-ar-REj" secondAttribute="width" id="lK3-TF-VSZ"/>
                                     <constraint firstAttribute="bottom" secondItem="ac2-4H-QQi" secondAttribute="bottom" constant="20" symbolic="YES" id="n57-Eg-Ad4"/>
-                                    <constraint firstItem="i2w-5o-kz9" firstAttribute="leading" secondItem="LS6-ar-REj" secondAttribute="trailing" constant="8" id="nbI-OA-0Pt"/>
+                                    <constraint firstItem="i2w-5o-kz9" firstAttribute="leading" secondItem="LS6-ar-REj" secondAttribute="trailing" constant="8" symbolic="YES" id="nbI-OA-0Pt"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="oDM-a0-TUd" secondAttribute="height" id="ofV-hh-6e4"/>
                                     <constraint firstItem="ac2-4H-QQi" firstAttribute="width" secondItem="TcA-yS-5qb" secondAttribute="width" id="pCK-Dr-ajc"/>
                                     <constraint firstItem="GRe-En-tgz" firstAttribute="centerY" secondItem="oDM-a0-TUd" secondAttribute="centerY" id="rtp-mr-qLf"/>
