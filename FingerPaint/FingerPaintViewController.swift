@@ -14,27 +14,48 @@ class FingerPaintViewController: UIViewController {
     
     var opacityButtonsShown = false
     var paintBrushWidthButtonsShown = false
+    var colorButtonsShown = false
+    var tempBool = false
 
     let drawingVM = DrawingViewModel()
+    
+    let colorChosen = ColorsToChooseFrom()
     
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet var opacitiyButtons: [UIButton]!
     @IBOutlet var paintBrushWidthButtons: [UIButton]!
+    @IBOutlet var colorButtons: [UIButton]!
 
     @IBAction func showOptions(_ sender: UIButton) {
         
         switch sender.tag {
         case 0:
             drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
+            
+            tempBool = !paintBrushWidthButtonsShown
+            drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &tempBool)
+            tempBool = !colorButtonsShown
+            drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &tempBool)
         case 1:
             drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
+            
+            tempBool = !opacityButtonsShown
+            drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &tempBool)
+            tempBool = !colorButtonsShown
+            drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &tempBool)
+        case 2:
+            drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+            
+            tempBool = !paintBrushWidthButtonsShown
+            drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &tempBool)
+            tempBool = !opacityButtonsShown
+            drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &tempBool)
         default: break
         }
         
     }
     
-    // TODO: - Change the opacity and width of drawline when buttons hit
     @IBAction func opacityChangeButtons(_ sender: UIButton) {
         switch sender.tag {
         case 0: drawingVM.opacity = 1.0
@@ -52,6 +73,7 @@ class FingerPaintViewController: UIViewController {
         default: break
         }
     }
+    
     @IBAction func paintBrushWidthChangeButtons(_ sender: UIButton) {
         switch sender.tag {
         case 0: drawingVM.paintBrushWidth = 1.0 * drawingVM.paintBrushWidthConverter
@@ -70,6 +92,33 @@ class FingerPaintViewController: UIViewController {
         }
     }
     
+    @IBAction func paintColorChangeButtons(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: drawingVM.color = drawingVM.black
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "CircleForOpacityLevelButtons"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
+        case 1: drawingVM.color = drawingVM.blue
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "blueCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
+        case 2: drawingVM.color = drawingVM.green
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "greenCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
+        case 3: drawingVM.color = drawingVM.red
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "redCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
+        case 4: drawingVM.color = drawingVM.orange
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "orangeCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
+        case 5: drawingVM.color = drawingVM.yellow
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "yellowCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
+        default: break
+        }
+    }
+    
+    @IBAction func eraserButton(_ sender: AnyObject) {
+        drawingVM.color = drawingVM.white
+    }
     
     @IBAction func eraseButton(_ sender: UIButton) {
         imageView.image = nil
@@ -83,7 +132,7 @@ class FingerPaintViewController: UIViewController {
         
         drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
         drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-
+        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
     }
     
 }
@@ -105,7 +154,7 @@ extension FingerPaintViewController {
             
             // 3
             context.setLineWidth(drawingVM.paintBrushWidth)
-            context.setStrokeColor(UIColor.black.cgColor)
+            context.setStrokeColor(drawingVM.color)
             context.setAlpha(drawingVM.opacity)
             
             // 4

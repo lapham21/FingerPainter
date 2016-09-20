@@ -24,6 +24,12 @@
                                         <frame key="frameInset" width="375" height="647"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68n-fB-VZ8">
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="showOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ju6-3a-aRC"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcA-yS-5qb">
                                         <state key="normal" image="OpacityButton"/>
                                         <connections>
@@ -115,27 +121,80 @@
                                             <action selector="eraseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B51-hv-qAi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-5w-mor">
+                                        <state key="normal" image="CircleForOpacityLevelButtons"/>
+                                        <connections>
+                                            <action selector="paintColorChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bY-4C-zPz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srb-7C-51X">
+                                        <state key="normal" image="blueCircle"/>
+                                        <connections>
+                                            <action selector="paintColorChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hmj-Zx-VXH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-hA-Jba">
+                                        <state key="normal" image="greenCircle"/>
+                                        <connections>
+                                            <action selector="paintColorChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gy-iC-uul"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8X-Uk-e1o">
+                                        <state key="normal" image="redCircle"/>
+                                        <connections>
+                                            <action selector="paintColorChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7U-Yq-CjN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0av-6F-HJy">
+                                        <state key="normal" image="orangeCircle"/>
+                                        <connections>
+                                            <action selector="paintColorChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcM-us-zkX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-Nc-fOG">
+                                        <state key="normal" image="yellowCircle"/>
+                                        <connections>
+                                            <action selector="paintColorChangeButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcS-Ii-2bb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyX-S0-agl">
+                                        <state key="normal" image="eraserButton"/>
+                                        <connections>
+                                            <action selector="eraserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ii6-Ho-ZNS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="ac2-4H-QQi" firstAttribute="height" secondItem="TcA-yS-5qb" secondAttribute="height" id="0Ke-9k-kS2"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="1Bk-00-UGD"/>
+                                    <constraint firstItem="68n-fB-VZ8" firstAttribute="leading" secondItem="pqb-sG-cdt" secondAttribute="trailing" constant="8" symbolic="YES" id="1Kt-vP-m8i"/>
                                     <constraint firstItem="pqb-sG-cdt" firstAttribute="leading" secondItem="TcA-yS-5qb" secondAttribute="trailing" constant="8" symbolic="YES" id="2ga-jl-cbC"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="cZU-hj-eV5" secondAttribute="height" id="2kP-65-3V5"/>
-                                    <constraint firstItem="GRe-En-tgz" firstAttribute="height" secondItem="i2w-5o-kz9" secondAttribute="height" id="3Cp-N7-bcf"/>
+                                    <constraint firstAttribute="bottom" secondItem="68n-fB-VZ8" secondAttribute="bottom" constant="20" symbolic="YES" id="3RY-PY-nmI"/>
+                                    <constraint firstItem="VyX-S0-agl" firstAttribute="centerY" secondItem="TcA-yS-5qb" secondAttribute="centerY" id="3UN-7T-b7D"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="top" secondItem="LS6-ar-REj" secondAttribute="bottom" constant="8" symbolic="YES" id="46u-O6-8va"/>
+                                    <constraint firstItem="Ige-hA-Jba" firstAttribute="centerY" secondItem="SH4-gA-78H" secondAttribute="centerY" id="4gK-lO-xEe"/>
                                     <constraint firstItem="cZU-hj-eV5" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="6vX-Mn-0SE"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="cZU-hj-eV5" secondAttribute="width" id="A0k-Nn-YDi"/>
                                     <constraint firstItem="SH4-gA-78H" firstAttribute="top" secondItem="AIe-jP-cJp" secondAttribute="bottom" constant="8" symbolic="YES" id="BWn-GL-PB3"/>
+                                    <constraint firstItem="1QN-5w-mor" firstAttribute="centerY" secondItem="LS6-ar-REj" secondAttribute="centerY" id="Clx-Wx-gsz"/>
                                     <constraint firstItem="QUA-Wd-iDK" firstAttribute="centerY" secondItem="cZU-hj-eV5" secondAttribute="centerY" id="Dvm-2f-xfi"/>
-                                    <constraint firstItem="pqb-sG-cdt" firstAttribute="top" secondItem="i2w-5o-kz9" secondAttribute="bottom" constant="8" id="EiJ-6Y-MWF"/>
+                                    <constraint firstItem="Srb-7C-51X" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="EBT-PC-Fit"/>
+                                    <constraint firstItem="pqb-sG-cdt" firstAttribute="top" secondItem="i2w-5o-kz9" secondAttribute="bottom" constant="8" symbolic="YES" id="EiJ-6Y-MWF"/>
+                                    <constraint firstItem="0av-6F-HJy" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="Eli-VK-7Bj"/>
                                     <constraint firstItem="M6x-3W-pGf" firstAttribute="centerY" secondItem="AIe-jP-cJp" secondAttribute="centerY" id="FF1-WP-mwU"/>
                                     <constraint firstItem="SH4-gA-78H" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="FK1-jZ-Lm7"/>
                                     <constraint firstItem="AIe-jP-cJp" firstAttribute="top" secondItem="ye4-Ye-Z58" secondAttribute="bottom" constant="8" symbolic="YES" id="Fgb-Ge-14A"/>
                                     <constraint firstItem="LS6-ar-REj" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="Fv4-sZ-KMp"/>
+                                    <constraint firstItem="dnW-Nc-fOG" firstAttribute="centerY" secondItem="oDM-a0-TUd" secondAttribute="centerY" id="GdW-Ux-drG"/>
                                     <constraint firstItem="ye4-Ye-Z58" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="NUg-Ty-CtF"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="ye4-Ye-Z58" secondAttribute="height" id="Nqx-Uc-0Kd"/>
+                                    <constraint firstItem="1QN-5w-mor" firstAttribute="leading" secondItem="68n-fB-VZ8" secondAttribute="leading" id="OTa-O5-yA1"/>
+                                    <constraint firstItem="68n-fB-VZ8" firstAttribute="top" secondItem="1QN-5w-mor" secondAttribute="bottom" constant="8" symbolic="YES" id="Px3-uw-1SB"/>
+                                    <constraint firstItem="dnW-Nc-fOG" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="Tbk-o2-qC1"/>
                                     <constraint firstItem="oDM-a0-TUd" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="Y30-eZ-zah"/>
+                                    <constraint firstItem="g8X-Uk-e1o" firstAttribute="centerY" secondItem="AIe-jP-cJp" secondAttribute="centerY" id="ZaQ-jX-ePM"/>
                                     <constraint firstItem="tYf-xO-TjZ" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="Zcv-YO-r6K"/>
                                     <constraint firstItem="cZU-hj-eV5" firstAttribute="top" secondItem="SH4-gA-78H" secondAttribute="bottom" constant="8" symbolic="YES" id="ZrB-IJ-CJ2"/>
                                     <constraint firstItem="LS6-ar-REj" firstAttribute="top" secondItem="cZU-hj-eV5" secondAttribute="bottom" constant="8" symbolic="YES" id="aIK-4b-oIW"/>
@@ -147,9 +206,9 @@
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="oDM-a0-TUd" secondAttribute="width" id="dAd-QD-XTU"/>
                                     <constraint firstItem="3n6-wN-jqG" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="dm9-vp-tIs"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="LS6-ar-REj" secondAttribute="height" id="fhY-CK-5TB"/>
-                                    <constraint firstItem="GRe-En-tgz" firstAttribute="width" secondItem="i2w-5o-kz9" secondAttribute="width" id="h3I-0M-KZM"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="ye4-Ye-Z58" secondAttribute="width" id="iBB-vt-njh"/>
                                     <constraint firstItem="M6x-3W-pGf" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="iJD-wX-15x"/>
+                                    <constraint firstItem="g8X-Uk-e1o" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="ixq-cB-Qsj"/>
                                     <constraint firstItem="GRe-En-tgz" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="jHC-ry-voC"/>
                                     <constraint firstItem="QUA-Wd-iDK" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="kPO-oz-k3X"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="LS6-ar-REj" secondAttribute="width" id="lK3-TF-VSZ"/>
@@ -161,11 +220,15 @@
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="AIe-jP-cJp" secondAttribute="width" id="tFD-l9-WgX"/>
                                     <constraint firstAttribute="trailing" secondItem="ac2-4H-QQi" secondAttribute="trailing" constant="20" symbolic="YES" id="tM5-Z0-yzN"/>
                                     <constraint firstItem="3n6-wN-jqG" firstAttribute="centerY" secondItem="ye4-Ye-Z58" secondAttribute="centerY" id="til-0l-I9h"/>
+                                    <constraint firstItem="0av-6F-HJy" firstAttribute="centerY" secondItem="ye4-Ye-Z58" secondAttribute="centerY" id="tmr-hF-9cF"/>
                                     <constraint firstItem="AIe-jP-cJp" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="uLQ-Hd-yij"/>
+                                    <constraint firstItem="Ige-hA-Jba" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="uX8-6y-hPG"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="SH4-gA-78H" secondAttribute="width" id="v67-or-P0i"/>
+                                    <constraint firstItem="Srb-7C-51X" firstAttribute="centerY" secondItem="cZU-hj-eV5" secondAttribute="centerY" id="vkK-m5-gEZ"/>
                                     <constraint firstAttribute="bottom" secondItem="pqb-sG-cdt" secondAttribute="bottom" constant="20" symbolic="YES" id="xa8-L3-7SM"/>
                                     <constraint firstItem="ye4-Ye-Z58" firstAttribute="top" secondItem="oDM-a0-TUd" secondAttribute="bottom" constant="8" symbolic="YES" id="y0Y-eh-lut"/>
                                     <constraint firstItem="tYf-xO-TjZ" firstAttribute="centerY" secondItem="SH4-gA-78H" secondAttribute="centerY" id="yEI-Nt-f7X"/>
+                                    <constraint firstItem="VyX-S0-agl" firstAttribute="leading" secondItem="68n-fB-VZ8" secondAttribute="trailing" constant="8" symbolic="YES" id="yWI-FA-uHm"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -191,11 +254,17 @@
                         <outletCollection property="paintBrushWidthButtons" destination="M6x-3W-pGf" collectionClass="NSMutableArray" id="yRY-aC-pi6"/>
                         <outletCollection property="paintBrushWidthButtons" destination="3n6-wN-jqG" collectionClass="NSMutableArray" id="kYn-u7-Qru"/>
                         <outletCollection property="paintBrushWidthButtons" destination="GRe-En-tgz" collectionClass="NSMutableArray" id="mHd-L1-q7E"/>
+                        <outletCollection property="colorButtons" destination="1QN-5w-mor" collectionClass="NSMutableArray" id="7XN-2r-CDZ"/>
+                        <outletCollection property="colorButtons" destination="Srb-7C-51X" collectionClass="NSMutableArray" id="hNY-pT-T9U"/>
+                        <outletCollection property="colorButtons" destination="Ige-hA-Jba" collectionClass="NSMutableArray" id="VhZ-ga-ODD"/>
+                        <outletCollection property="colorButtons" destination="g8X-Uk-e1o" collectionClass="NSMutableArray" id="x2M-8j-svP"/>
+                        <outletCollection property="colorButtons" destination="0av-6F-HJy" collectionClass="NSMutableArray" id="zKC-hX-9Xi"/>
+                        <outletCollection property="colorButtons" destination="dnW-Nc-fOG" collectionClass="NSMutableArray" id="hFP-C7-opd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274.39999999999998" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="-306.39999999999998" y="-70.614692653673174"/>
         </scene>
     </scenes>
     <resources>
@@ -203,5 +272,11 @@
         <image name="CircleForOpacityLevelButtons" width="50" height="50"/>
         <image name="OpacityButton" width="50" height="50"/>
         <image name="PaintBrushButton" width="50" height="50"/>
+        <image name="blueCircle" width="50" height="50"/>
+        <image name="eraserButton" width="50" height="50"/>
+        <image name="greenCircle" width="50" height="50"/>
+        <image name="orangeCircle" width="50" height="50"/>
+        <image name="redCircle" width="50" height="50"/>
+        <image name="yellowCircle" width="50" height="50"/>
     </resources>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		695279E61D9187760010D950 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695279E51D9187760010D950 /* DrawingViewModel.swift */; };
+		697E7AEB1D91C485006E473A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697E7AEA1D91C485006E473A /* Color.swift */; };
 		69B30E991D907385009D599D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B30E981D907385009D599D /* AppDelegate.swift */; };
 		69B30EA01D907385009D599D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B30E9F1D907385009D599D /* Assets.xcassets */; };
 		69B30EA31D907385009D599D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B30EA11D907385009D599D /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		695279E51D9187760010D950 /* DrawingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		697E7AEA1D91C485006E473A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		69B30E951D907385009D599D /* FingerPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B30E981D907385009D599D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B30E9F1D907385009D599D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				69B30EC61D90739C009D599D /* Main.storyboard */,
 				69B30EC71D90739C009D599D /* FingerPaintViewController.swift */,
+				697E7AEA1D91C485006E473A /* Color.swift */,
 				695279E51D9187760010D950 /* DrawingViewModel.swift */,
 				69B30E981D907385009D599D /* AppDelegate.swift */,
 				69B30E9F1D907385009D599D /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				695279E61D9187760010D950 /* DrawingViewModel.swift in Sources */,
+				697E7AEB1D91C485006E473A /* Color.swift in Sources */,
 				69B30EC91D90739C009D599D /* FingerPaintViewController.swift in Sources */,
 				69B30E991D907385009D599D /* AppDelegate.swift in Sources */,
 			);
