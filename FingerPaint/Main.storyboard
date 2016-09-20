@@ -20,6 +20,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-YM-DER">
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4J0-Qt-T5Q">
+                                        <frame key="frameInset" width="375" height="647"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcA-yS-5qb">
                                         <state key="normal" image="OpacityButton"/>
                                         <connections>
@@ -174,6 +178,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="4J0-Qt-T5Q" id="9mA-Cj-ezi"/>
                         <outletCollection property="opacitiyButtons" destination="LS6-ar-REj" collectionClass="NSMutableArray" id="GTU-NC-uix"/>
                         <outletCollection property="opacitiyButtons" destination="cZU-hj-eV5" collectionClass="NSMutableArray" id="rds-KE-UwG"/>
                         <outletCollection property="opacitiyButtons" destination="SH4-gA-78H" collectionClass="NSMutableArray" id="b4q-c4-TlX"/>
@@ -190,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="679" y="144"/>
+            <point key="canvasLocation" x="-274.39999999999998" y="-36.431784107946029"/>
         </scene>
     </scenes>
     <resources>
