@@ -242,12 +242,6 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="4J0-Qt-T5Q" id="9mA-Cj-ezi"/>
-                        <outletCollection property="opacitiyButtons" destination="LS6-ar-REj" collectionClass="NSMutableArray" id="GTU-NC-uix"/>
-                        <outletCollection property="opacitiyButtons" destination="cZU-hj-eV5" collectionClass="NSMutableArray" id="rds-KE-UwG"/>
-                        <outletCollection property="opacitiyButtons" destination="SH4-gA-78H" collectionClass="NSMutableArray" id="b4q-c4-TlX"/>
-                        <outletCollection property="opacitiyButtons" destination="AIe-jP-cJp" collectionClass="NSMutableArray" id="fKu-uX-IE0"/>
-                        <outletCollection property="opacitiyButtons" destination="ye4-Ye-Z58" collectionClass="NSMutableArray" id="RLT-uX-YGG"/>
-                        <outletCollection property="opacitiyButtons" destination="oDM-a0-TUd" collectionClass="NSMutableArray" id="5Sj-JX-Gjt"/>
                         <outletCollection property="paintBrushWidthButtons" destination="i2w-5o-kz9" collectionClass="NSMutableArray" id="S63-4R-Fnh"/>
                         <outletCollection property="paintBrushWidthButtons" destination="QUA-Wd-iDK" collectionClass="NSMutableArray" id="NkU-TV-eaq"/>
                         <outletCollection property="paintBrushWidthButtons" destination="tYf-xO-TjZ" collectionClass="NSMutableArray" id="WLC-kd-Rmz"/>
@@ -260,11 +254,17 @@
                         <outletCollection property="colorButtons" destination="g8X-Uk-e1o" collectionClass="NSMutableArray" id="x2M-8j-svP"/>
                         <outletCollection property="colorButtons" destination="0av-6F-HJy" collectionClass="NSMutableArray" id="zKC-hX-9Xi"/>
                         <outletCollection property="colorButtons" destination="dnW-Nc-fOG" collectionClass="NSMutableArray" id="hFP-C7-opd"/>
+                        <outletCollection property="opacityButtons" destination="LS6-ar-REj" collectionClass="NSMutableArray" id="PcX-Eb-zE8"/>
+                        <outletCollection property="opacityButtons" destination="cZU-hj-eV5" collectionClass="NSMutableArray" id="pr5-oW-3Aj"/>
+                        <outletCollection property="opacityButtons" destination="SH4-gA-78H" collectionClass="NSMutableArray" id="FUh-62-mxk"/>
+                        <outletCollection property="opacityButtons" destination="AIe-jP-cJp" collectionClass="NSMutableArray" id="Pmx-wH-7I3"/>
+                        <outletCollection property="opacityButtons" destination="ye4-Ye-Z58" collectionClass="NSMutableArray" id="csp-a8-lIr"/>
+                        <outletCollection property="opacityButtons" destination="oDM-a0-TUd" collectionClass="NSMutableArray" id="T4x-9d-JFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-306.39999999999998" y="-70.614692653673174"/>
+            <point key="canvasLocation" x="-990" y="-130"/>
         </scene>
     </scenes>
     <resources>

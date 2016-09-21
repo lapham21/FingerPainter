@@ -11,11 +11,6 @@ import UIKit
 class FingerPaintViewController: UIViewController {
     
     // MARK: - Outlets, Variables and Models
-    
-    var opacityButtonsShown = false
-    var paintBrushWidthButtonsShown = false
-    var colorButtonsShown = false
-    var tempBool = false
 
     let drawingVM = DrawingViewModel()
     
@@ -23,101 +18,31 @@ class FingerPaintViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet var opacitiyButtons: [UIButton]!
+
+    @IBOutlet var opacityButtons: [UIButton]!
     @IBOutlet var paintBrushWidthButtons: [UIButton]!
     @IBOutlet var colorButtons: [UIButton]!
 
     @IBAction func showOptions(_ sender: UIButton) {
         
-        switch sender.tag {
-        case 0:
-            drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-            
-            tempBool = !paintBrushWidthButtonsShown
-            drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &tempBool)
-            tempBool = !colorButtonsShown
-            drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &tempBool)
-        case 1:
-            drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-            
-            tempBool = !opacityButtonsShown
-            drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &tempBool)
-            tempBool = !colorButtonsShown
-            drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &tempBool)
-        case 2:
-            drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-            
-            tempBool = !paintBrushWidthButtonsShown
-            drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &tempBool)
-            tempBool = !opacityButtonsShown
-            drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &tempBool)
-        default: break
-        }
+        drawingVM.showOptions(sender: sender, opacityButtons: opacityButtons, colorButtons: colorButtons, paintBrushWidthButtons: paintBrushWidthButtons)
         
     }
     
     @IBAction func opacityChangeButtons(_ sender: UIButton) {
-        switch sender.tag {
-        case 0: drawingVM.opacity = 1.0
-                drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        case 1: drawingVM.opacity = 0.75
-                drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        case 2: drawingVM.opacity = 0.60
-                drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        case 3: drawingVM.opacity = 0.45
-                drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        case 4: drawingVM.opacity = 0.30
-                drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        case 5: drawingVM.opacity = 0.15
-                drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        default: break
-        }
+        drawingVM.changeOpacityBasedOn(button: sender, withOpacityButtons: opacityButtons)
     }
     
     @IBAction func paintBrushWidthChangeButtons(_ sender: UIButton) {
-        switch sender.tag {
-        case 0: drawingVM.paintBrushWidth = 1.0 * drawingVM.paintBrushWidthConverter
-                drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        case 1: drawingVM.paintBrushWidth = 0.75 * drawingVM.paintBrushWidthConverter
-                drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        case 2: drawingVM.paintBrushWidth = 0.60 * drawingVM.paintBrushWidthConverter
-                drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        case 3: drawingVM.paintBrushWidth = 0.45 * drawingVM.paintBrushWidthConverter
-                drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        case 4: drawingVM.paintBrushWidth = 0.30 * drawingVM.paintBrushWidthConverter
-                drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        case 5: drawingVM.paintBrushWidth = 0.15 * drawingVM.paintBrushWidthConverter
-                drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        default: break
-        }
+        drawingVM.changePaintBrushWidthBasedOn(button: sender, withPaintBrushWidthButtons: paintBrushWidthButtons)
     }
     
     @IBAction func paintColorChangeButtons(_ sender: UIButton) {
-        switch sender.tag {
-        case 0: drawingVM.color = drawingVM.black
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "CircleForOpacityLevelButtons"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
-        case 1: drawingVM.color = drawingVM.blue
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "blueCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
-        case 2: drawingVM.color = drawingVM.green
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "greenCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
-        case 3: drawingVM.color = drawingVM.red
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "redCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
-        case 4: drawingVM.color = drawingVM.orange
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "orangeCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
-        case 5: drawingVM.color = drawingVM.yellow
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
-        drawingVM.changeDisplayButtonsColors(imageForColorCircle: #imageLiteral(resourceName: "yellowCircle"), opacityButtons: opacitiyButtons, paintBrushWidthButtons: paintBrushWidthButtons)
-        default: break
-        }
+        drawingVM.changePaintBrushColorBasedOn(button: sender, withPaintBrushColorButtons: colorButtons, andWithOpacityButtons: opacityButtons, andPaintBrushWidthButtons: paintBrushWidthButtons)
     }
     
     @IBAction func eraserButton(_ sender: AnyObject) {
-        drawingVM.color = drawingVM.white
+        drawingVM.eraser()
     }
     
     @IBAction func eraseButton(_ sender: UIButton) {
@@ -130,9 +55,7 @@ class FingerPaintViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        drawingVM.displayButtons(buttons: opacitiyButtons, withShouldShowBoolean: &opacityButtonsShown)
-        drawingVM.displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
-        drawingVM.displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
+        drawingVM.setupForViewDidLoad(withPaintBrushColorButtons: colorButtons, andWithOpacityButtons: opacityButtons, andPaintBrushWidthButtons: paintBrushWidthButtons)
     }
     
 }
