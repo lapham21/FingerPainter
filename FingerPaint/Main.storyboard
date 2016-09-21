@@ -163,8 +163,8 @@
                                             <action selector="eraserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ii6-Ho-ZNS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-O0-Tjo">
-                                        <state key="normal" title="Save"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-O0-Tjo">
+                                        <state key="normal" image="saveImage"/>
                                         <connections>
                                             <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJh-ij-d0K"/>
                                         </connections>
@@ -254,6 +254,7 @@
                         <outlet property="eraserButton" destination="VyX-S0-agl" id="v9H-MO-yKW"/>
                         <outlet property="imageView" destination="4J0-Qt-T5Q" id="9mA-Cj-ezi"/>
                         <outlet property="opacityButton" destination="TcA-yS-5qb" id="T9Y-Yo-AQS"/>
+                        <outlet property="saveButton" destination="uOB-O0-Tjo" id="86K-9v-zd8"/>
                         <outlet property="widthButton" destination="pqb-sG-cdt" id="Ndm-37-5cn"/>
                         <outletCollection property="paintBrushWidthButtons" destination="i2w-5o-kz9" collectionClass="NSMutableArray" id="S63-4R-Fnh"/>
                         <outletCollection property="paintBrushWidthButtons" destination="QUA-Wd-iDK" collectionClass="NSMutableArray" id="NkU-TV-eaq"/>
@@ -290,6 +291,7 @@
         <image name="greenCircle" width="50" height="50"/>
         <image name="orangeCircle" width="50" height="50"/>
         <image name="redCircle" width="50" height="50"/>
+        <image name="saveImage" width="50" height="50"/>
         <image name="yellowCircle" width="50" height="50"/>
     </resources>
 </document>

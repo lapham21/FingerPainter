@@ -28,7 +28,7 @@ final class FingerPaintViewController: UIViewController {
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var eraseButton: UIButton!
-    
+    @IBOutlet weak var saveButton: UIButton!
 
     @IBAction func showOptions(_ sender: UIButton) {
         
@@ -126,6 +126,7 @@ final class FingerPaintViewController: UIViewController {
             multiplierForWidthCircles += 0.15
         }
         
+        saveButton.center.y += view.bounds.height
         opacityButton.center.x -= view.bounds.width
         widthButton.center.x -= view.bounds.width
         colorButton.center.x -= view.bounds.width
@@ -138,7 +139,7 @@ final class FingerPaintViewController: UIViewController {
                        animations: { [weak self] in
                         guard let strongSelf = self else { return }
                         strongSelf.eraseButton.center.x += strongSelf.view.bounds.width
-
+                        strongSelf.saveButton.center.y -= strongSelf.view.bounds.height
                         },
                        completion: nil)
         
