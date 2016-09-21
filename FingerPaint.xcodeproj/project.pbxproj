@@ -78,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690121901D9318B1001A5EDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				697E7AEA1D91C485006E473A /* Color.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		69B30E8C1D907385009D599D = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +111,8 @@
 			children = (
 				69B30EC61D90739C009D599D /* Main.storyboard */,
 				69B30EC71D90739C009D599D /* FingerPaintViewController.swift */,
-				697E7AEA1D91C485006E473A /* Color.swift */,
 				695279E51D9187760010D950 /* DrawingViewModel.swift */,
+				690121901D9318B1001A5EDD /* Supporting Files */,
 				69B30E981D907385009D599D /* AppDelegate.swift */,
 				69B30E9F1D907385009D599D /* Assets.xcassets */,
 				69B30EA11D907385009D599D /* LaunchScreen.storyboard */,

@@ -9,20 +9,21 @@
 import Foundation
 import UIKit
 
-class DrawingViewModel {
+final class DrawingViewModel {
     
+    // TODO: - Make private after moving the line creation logic here
     var isDrawing = false
-    var color = UIColor.black.cgColor
+    private var color = UIColor.black.cgColor
     var lastPoint: CGPoint = CGPoint.zero
-    var currentPoint: CGPoint = CGPoint.zero
-    var opacity: CGFloat = 1.0
-    var paintBrushWidth: CGFloat = 5.0
-    let paintBrushWidthConverter: CGFloat = 5.0
+    private var currentPoint: CGPoint = CGPoint.zero
+    private var opacity: CGFloat = 1.0
+    private var paintBrushWidth: CGFloat = 5.0
+    private let paintBrushWidthConverter: CGFloat = 5.0
     
-    var opacityButtonsShown = false
-    var paintBrushWidthButtonsShown = false
-    var colorButtonsShown = false
-    var tempBool = false
+    private var opacityButtonsShown = false
+    private var paintBrushWidthButtonsShown = false
+    private var colorButtonsShown = false
+    private var tempBool = false
     
     let Color = ColorsToChooseFrom()
   
@@ -146,6 +147,18 @@ class DrawingViewModel {
         displayButtons(buttons: paintBrushWidthButtons, withShouldShowBoolean: &paintBrushWidthButtonsShown)
         displayButtons(buttons: colorButtons, withShouldShowBoolean: &colorButtonsShown)
         
+    }
+    
+    func drawLineForContext(context: CGContext, fromPoint: CGPoint, toPoint: CGPoint) {
+        
+        context.move(to: fromPoint)
+        context.addLine(to: toPoint)
+        
+        context.setLineWidth(paintBrushWidth)
+        context.setStrokeColor(color)
+        context.setAlpha(opacity)
+        
+        context.strokePath()
     }
 
 }

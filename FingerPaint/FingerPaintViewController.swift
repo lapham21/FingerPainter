@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FingerPaintViewController: UIViewController {
+final class FingerPaintViewController: UIViewController {
     
-    // MARK: - Outlets, Variables and Models
+// MARK: - Outlets, Variables and Models
 
     let drawingVM = DrawingViewModel()
     
@@ -56,7 +56,51 @@ class FingerPaintViewController: UIViewController {
         imageView.image = nil
     }
     
-    // MARK: - ViewController LifeCycle
+    // MARK: - Line Drawing Code
+    
+    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+        
+        // 1
+        UIGraphicsBeginImageContext(view.frame.size)
+        if let context = UIGraphicsGetCurrentContext() {
+            imageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+            
+            drawingVM.drawLineForContext(context: context, fromPoint: fromPoint, toPoint: toPoint)
+            
+            // 5
+            imageView.image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        drawingVM.isDrawing = false
+        if let touch = touches.first {
+            drawingVM.lastPoint = touch.location(in: self.view)
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        drawingVM.isDrawing = true
+        if let touch = touches.first {
+            let currentPoint = touch.location(in: view)
+            drawLineFrom(fromPoint: drawingVM.lastPoint, toPoint: currentPoint)
+            
+            drawingVM.lastPoint = currentPoint
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if !drawingVM.isDrawing {
+            drawLineFrom(fromPoint: drawingVM.lastPoint, toPoint: drawingVM.lastPoint)
+        }
+        
+    }
+    
+// MARK: - ViewController LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,11 +109,7 @@ class FingerPaintViewController: UIViewController {
         drawingVM.setupForViewDidLoad(withPaintBrushColorButtons: colorButtons, andWithOpacityButtons: opacityButtons, andPaintBrushWidthButtons: paintBrushWidthButtons)
     }
     
-}
-
 // MARK: - Animations
-
-extension FingerPaintViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -131,65 +171,6 @@ extension FingerPaintViewController {
                         strongSelf.opacityButton.center.x += strongSelf.view.bounds.width
                         },
                        completion: nil)
-    }
-    
-}
-
-
-// MARK: - Line Drawing Code
-
-extension FingerPaintViewController {
-    
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
-        
-        // 1
-        UIGraphicsBeginImageContext(view.frame.size)
-        if let context = UIGraphicsGetCurrentContext() {
-            imageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
-            
-            // 2
-            context.move(to: fromPoint)
-            context.addLine(to: toPoint)
-            
-            // 3
-            context.setLineWidth(drawingVM.paintBrushWidth)
-            context.setStrokeColor(drawingVM.color)
-            context.setAlpha(drawingVM.opacity)
-            
-            // 4
-            context.strokePath()
-            
-            // 5
-            imageView.image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        drawingVM.isDrawing = false
-        if let touch = touches.first {
-            drawingVM.lastPoint = touch.location(in: self.view)
-        }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        drawingVM.isDrawing = true
-        if let touch = touches.first {
-            let currentPoint = touch.location(in: view)
-            drawLineFrom(fromPoint: drawingVM.lastPoint, toPoint: currentPoint)
-            
-            drawingVM.lastPoint = currentPoint
-        }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        if !drawingVM.isDrawing {
-            drawLineFrom(fromPoint: drawingVM.lastPoint, toPoint: drawingVM.lastPoint)
-        }
-        
     }
 
 }
