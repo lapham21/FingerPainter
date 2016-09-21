@@ -56,6 +56,13 @@ final class FingerPaintViewController: UIViewController {
         imageView.image = nil
     }
     
+    @IBAction func saveButton(_ sender: UIButton) {
+        
+        if let image = imageView.image {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+    }
+    
     // MARK: - Line Drawing Code
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {

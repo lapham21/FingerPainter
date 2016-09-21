@@ -163,6 +163,12 @@
                                             <action selector="eraserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ii6-Ho-ZNS"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-O0-Tjo">
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJh-ij-d0K"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -174,6 +180,7 @@
                                     <constraint firstAttribute="bottom" secondItem="68n-fB-VZ8" secondAttribute="bottom" constant="20" symbolic="YES" id="3RY-PY-nmI"/>
                                     <constraint firstItem="VyX-S0-agl" firstAttribute="centerY" secondItem="TcA-yS-5qb" secondAttribute="centerY" id="3UN-7T-b7D"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="top" secondItem="LS6-ar-REj" secondAttribute="bottom" constant="8" symbolic="YES" id="46u-O6-8va"/>
+                                    <constraint firstAttribute="trailing" secondItem="uOB-O0-Tjo" secondAttribute="trailing" constant="20" symbolic="YES" id="4Lm-5S-qV5"/>
                                     <constraint firstItem="Ige-hA-Jba" firstAttribute="centerY" secondItem="SH4-gA-78H" secondAttribute="centerY" id="4gK-lO-xEe"/>
                                     <constraint firstItem="cZU-hj-eV5" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="6vX-Mn-0SE"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="cZU-hj-eV5" secondAttribute="width" id="A0k-Nn-YDi"/>
@@ -188,6 +195,7 @@
                                     <constraint firstItem="AIe-jP-cJp" firstAttribute="top" secondItem="ye4-Ye-Z58" secondAttribute="bottom" constant="8" symbolic="YES" id="Fgb-Ge-14A"/>
                                     <constraint firstItem="LS6-ar-REj" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="Fv4-sZ-KMp"/>
                                     <constraint firstItem="dnW-Nc-fOG" firstAttribute="centerY" secondItem="oDM-a0-TUd" secondAttribute="centerY" id="GdW-Ux-drG"/>
+                                    <constraint firstItem="uOB-O0-Tjo" firstAttribute="top" secondItem="Vqb-YM-DER" secondAttribute="top" constant="20" symbolic="YES" id="Khi-e1-FnH"/>
                                     <constraint firstItem="ye4-Ye-Z58" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="NUg-Ty-CtF"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="height" secondItem="ye4-Ye-Z58" secondAttribute="height" id="Nqx-Uc-0Kd"/>
                                     <constraint firstItem="1QN-5w-mor" firstAttribute="leading" secondItem="68n-fB-VZ8" secondAttribute="leading" id="OTa-O5-yA1"/>
@@ -269,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="-108"/>
+            <point key="canvasLocation" x="-1223" y="-116"/>
         </scene>
     </scenes>
     <resources>
