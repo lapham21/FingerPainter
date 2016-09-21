@@ -8,17 +8,16 @@
 
 import UIKit
 
-final class FingerPaintViewController: UIViewController {
+final class FingerPaintViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 // MARK: - Outlets, Variables and Models
 
     let drawingVM = DrawingViewModel()
-    
     let colorChosen = ColorsToChooseFrom()
+    let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var imageView: UIImageView!
     
-
     @IBOutlet var opacityButtons: [UIButton]!
     @IBOutlet var paintBrushWidthButtons: [UIButton]!
     @IBOutlet var colorButtons: [UIButton]!
@@ -29,6 +28,7 @@ final class FingerPaintViewController: UIViewController {
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var eraseButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var loadButton: UIButton!
 
     @IBAction func showOptions(_ sender: UIButton) {
         
@@ -54,6 +54,13 @@ final class FingerPaintViewController: UIViewController {
     
     @IBAction func eraseButton(_ sender: UIButton) {
         imageView.image = nil
+    }
+    
+    @IBAction func loadImageButtonTapped(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -126,6 +133,7 @@ final class FingerPaintViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        imagePicker.delegate = self
         drawingVM.setupForViewDidLoad(withPaintBrushColorButtons: colorButtons, andWithOpacityButtons: opacityButtons, andPaintBrushWidthButtons: paintBrushWidthButtons)
     }
     
@@ -140,6 +148,7 @@ final class FingerPaintViewController: UIViewController {
         }
         
         saveButton.center.y += view.bounds.height
+        loadButton.center.y += view.bounds.height
         opacityButton.center.x -= view.bounds.width
         widthButton.center.x -= view.bounds.width
         colorButton.center.x -= view.bounds.width
@@ -152,7 +161,7 @@ final class FingerPaintViewController: UIViewController {
                        animations: { [weak self] in
                         guard let strongSelf = self else { return }
                         strongSelf.eraseButton.center.x += strongSelf.view.bounds.width
-                        strongSelf.saveButton.center.y -= strongSelf.view.bounds.height
+                        strongSelf.loadButton.center.y -= strongSelf.view.bounds.height
                         },
                        completion: nil)
         
@@ -162,6 +171,7 @@ final class FingerPaintViewController: UIViewController {
                        animations: { [weak self] in
                         guard let strongSelf = self else { return }
                         strongSelf.eraserButton.center.x += strongSelf.view.bounds.width
+                        strongSelf.saveButton.center.y -= strongSelf.view.bounds.height
                         },
                        completion: nil)
         
@@ -193,5 +203,20 @@ final class FingerPaintViewController: UIViewController {
                         },
                        completion: nil)
     }
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//            imageView.contentMode = .scaleAspectFit
+            imageView.image = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -169,6 +169,12 @@
                                             <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJh-ij-d0K"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9Z-Cf-cW0">
+                                        <state key="normal" image="loadImage"/>
+                                        <connections>
+                                            <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6T0-Fh-avv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -202,6 +208,7 @@
                                     <constraint firstItem="68n-fB-VZ8" firstAttribute="top" secondItem="1QN-5w-mor" secondAttribute="bottom" constant="8" symbolic="YES" id="Px3-uw-1SB"/>
                                     <constraint firstItem="dnW-Nc-fOG" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="Tbk-o2-qC1"/>
                                     <constraint firstItem="oDM-a0-TUd" firstAttribute="leading" secondItem="Vqb-YM-DER" secondAttribute="leading" constant="20" symbolic="YES" id="Y30-eZ-zah"/>
+                                    <constraint firstItem="uOB-O0-Tjo" firstAttribute="leading" secondItem="M9Z-Cf-cW0" secondAttribute="trailing" constant="8" symbolic="YES" id="ZDT-PF-ecc"/>
                                     <constraint firstItem="g8X-Uk-e1o" firstAttribute="centerY" secondItem="AIe-jP-cJp" secondAttribute="centerY" id="ZaQ-jX-ePM"/>
                                     <constraint firstItem="tYf-xO-TjZ" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="Zcv-YO-r6K"/>
                                     <constraint firstItem="cZU-hj-eV5" firstAttribute="top" secondItem="SH4-gA-78H" secondAttribute="bottom" constant="8" symbolic="YES" id="ZrB-IJ-CJ2"/>
@@ -219,6 +226,7 @@
                                     <constraint firstItem="g8X-Uk-e1o" firstAttribute="centerX" secondItem="1QN-5w-mor" secondAttribute="centerX" id="ixq-cB-Qsj"/>
                                     <constraint firstItem="GRe-En-tgz" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="jHC-ry-voC"/>
                                     <constraint firstItem="QUA-Wd-iDK" firstAttribute="centerX" secondItem="i2w-5o-kz9" secondAttribute="centerX" id="kPO-oz-k3X"/>
+                                    <constraint firstItem="M9Z-Cf-cW0" firstAttribute="top" secondItem="Vqb-YM-DER" secondAttribute="top" constant="20" symbolic="YES" id="kaG-qj-YGy"/>
                                     <constraint firstItem="TcA-yS-5qb" firstAttribute="width" secondItem="LS6-ar-REj" secondAttribute="width" id="lK3-TF-VSZ"/>
                                     <constraint firstAttribute="bottom" secondItem="ac2-4H-QQi" secondAttribute="bottom" constant="20" symbolic="YES" id="n57-Eg-Ad4"/>
                                     <constraint firstItem="i2w-5o-kz9" firstAttribute="leading" secondItem="LS6-ar-REj" secondAttribute="trailing" constant="8" symbolic="YES" id="nbI-OA-0Pt"/>
@@ -253,6 +261,7 @@
                         <outlet property="eraseButton" destination="ac2-4H-QQi" id="hSw-db-axA"/>
                         <outlet property="eraserButton" destination="VyX-S0-agl" id="v9H-MO-yKW"/>
                         <outlet property="imageView" destination="4J0-Qt-T5Q" id="9mA-Cj-ezi"/>
+                        <outlet property="loadButton" destination="M9Z-Cf-cW0" id="ltx-RG-hQd"/>
                         <outlet property="opacityButton" destination="TcA-yS-5qb" id="T9Y-Yo-AQS"/>
                         <outlet property="saveButton" destination="uOB-O0-Tjo" id="86K-9v-zd8"/>
                         <outlet property="widthButton" destination="pqb-sG-cdt" id="Ndm-37-5cn"/>
@@ -289,6 +298,7 @@
         <image name="blueCircle" width="50" height="50"/>
         <image name="eraserButton" width="50" height="50"/>
         <image name="greenCircle" width="50" height="50"/>
+        <image name="loadImage" width="50" height="50"/>
         <image name="orangeCircle" width="50" height="50"/>
         <image name="redCircle" width="50" height="50"/>
         <image name="saveImage" width="50" height="50"/>

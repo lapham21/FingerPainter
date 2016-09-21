@@ -11,7 +11,6 @@ import UIKit
 
 final class DrawingViewModel {
     
-    // TODO: - Make private after moving the line creation logic here
     var isDrawing = false
     private var color = UIColor.black.cgColor
     var lastPoint: CGPoint = CGPoint.zero
