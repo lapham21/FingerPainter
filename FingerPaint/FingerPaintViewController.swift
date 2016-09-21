@@ -22,6 +22,13 @@ class FingerPaintViewController: UIViewController {
     @IBOutlet var opacityButtons: [UIButton]!
     @IBOutlet var paintBrushWidthButtons: [UIButton]!
     @IBOutlet var colorButtons: [UIButton]!
+    
+    @IBOutlet weak var opacityButton: UIButton!
+    @IBOutlet weak var widthButton: UIButton!
+    @IBOutlet weak var colorButton: UIButton!
+    @IBOutlet weak var eraserButton: UIButton!
+    @IBOutlet weak var eraseButton: UIButton!
+    
 
     @IBAction func showOptions(_ sender: UIButton) {
         
@@ -59,6 +66,75 @@ class FingerPaintViewController: UIViewController {
     }
     
 }
+
+// MARK: - Animations
+
+extension FingerPaintViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        var multiplierForWidthCircles: CGFloat = 0.15
+        for button in paintBrushWidthButtons {
+            button.imageEdgeInsets = UIEdgeInsetsMake(multiplierForWidthCircles * button.frame.size.height / 2, multiplierForWidthCircles * button.frame.size.width / 2, multiplierForWidthCircles * button.frame.size.height / 2, multiplierForWidthCircles * button.frame.size.width / 2)
+            multiplierForWidthCircles += 0.15
+        }
+        
+        opacityButton.center.x -= view.bounds.width
+        widthButton.center.x -= view.bounds.width
+        colorButton.center.x -= view.bounds.width
+        eraserButton.center.x -= view.bounds.width
+        eraseButton.center.x -= view.bounds.width
+
+        UIView.animate(withDuration: 1.0,
+                       delay: 0.0,
+                       options: .curveEaseOut,
+                       animations: { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.eraseButton.center.x += strongSelf.view.bounds.width
+
+                        },
+                       completion: nil)
+        
+        UIView.animate(withDuration: 1.0,
+                       delay: 0.2,
+                       options: .curveEaseOut,
+                       animations: { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.eraserButton.center.x += strongSelf.view.bounds.width
+                        },
+                       completion: nil)
+        
+        
+        UIView.animate(withDuration: 1.0,
+                       delay: 0.4,
+                       options: .curveEaseOut,
+                       animations: { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.colorButton.center.x += strongSelf.view.bounds.width
+                        },
+                       completion: nil)
+        
+        UIView.animate(withDuration: 1.0,
+                       delay: 0.6,
+                       options: .curveEaseOut,
+                       animations: { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.widthButton.center.x += strongSelf.view.bounds.width
+                        },
+                       completion: nil)
+        
+        UIView.animate(withDuration: 1.0,
+                       delay: 0.8,
+                       options: .curveEaseOut,
+                       animations: { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.opacityButton.center.x += strongSelf.view.bounds.width
+                        },
+                       completion: nil)
+    }
+    
+}
+
 
 // MARK: - Line Drawing Code
 

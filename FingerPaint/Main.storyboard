@@ -241,7 +241,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorButton" destination="68n-fB-VZ8" id="DIb-Nc-qAu"/>
+                        <outlet property="eraseButton" destination="ac2-4H-QQi" id="hSw-db-axA"/>
+                        <outlet property="eraserButton" destination="VyX-S0-agl" id="v9H-MO-yKW"/>
                         <outlet property="imageView" destination="4J0-Qt-T5Q" id="9mA-Cj-ezi"/>
+                        <outlet property="opacityButton" destination="TcA-yS-5qb" id="T9Y-Yo-AQS"/>
+                        <outlet property="widthButton" destination="pqb-sG-cdt" id="Ndm-37-5cn"/>
                         <outletCollection property="paintBrushWidthButtons" destination="i2w-5o-kz9" collectionClass="NSMutableArray" id="S63-4R-Fnh"/>
                         <outletCollection property="paintBrushWidthButtons" destination="QUA-Wd-iDK" collectionClass="NSMutableArray" id="NkU-TV-eaq"/>
                         <outletCollection property="paintBrushWidthButtons" destination="tYf-xO-TjZ" collectionClass="NSMutableArray" id="WLC-kd-Rmz"/>
@@ -264,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-990" y="-130"/>
+            <point key="canvasLocation" x="-718" y="-108"/>
         </scene>
     </scenes>
     <resources>
